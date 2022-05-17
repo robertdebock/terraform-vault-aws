@@ -4,8 +4,8 @@ resource "vault_aws_secret_backend" "default" {
 }
 
 resource "vault_aws_secret_backend_role" "default" {
-  backend = vault_aws_secret_backend.default.path
-  name    = "deploy"
+  backend         = vault_aws_secret_backend.default.path
+  name            = "deploy"
   credential_type = "iam_user"
 
   policy_document = <<EOT
