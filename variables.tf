@@ -9,7 +9,7 @@ variable "access_key" {
 variable "secret_key" {
   description = "The secret key that Vault will use to generate credentials"
   validation {
-    condition     = try(length(var.secret_key),"fourtybitsofrandomnessisnoteasytomakeman") == 40 || var.secret_key == null
+    condition     = try(length(var.secret_key), "fourtybitsofrandomnessisnoteasytomakeman") == 40 || var.secret_key == null
     error_message = "When specifying a secret key, please use the correct length."
   }
 }
